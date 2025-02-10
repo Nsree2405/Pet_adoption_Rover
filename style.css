@@ -1,0 +1,45 @@
+h2{
+    text-align:center;
+     color:black; 
+    background-color: rgb(255, 255, 5);
+}
+    .heading{
+        text-align: center;
+        color:rgb(238, 5, 43);
+        background-color: rgb(39, 255, 39);
+    }
+    .image-style,.bulldog{
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        display: block;
+        border: rgb(0, 0, 0);
+        box-shadow:rgb(189, 112, 127);
+    }
+    .searchbox{
+        text-align: center;
+    }
+    .formsearch{
+        width: 500px;
+        height: 30px;
+    }
+    .searchbutton{
+        width:70px;
+        height: 30px;
+    }
+    .row{
+        text-align: auto;
+        border: 3px solid #fff;
+        padding: 20px;
+    }
+    .col{
+        text-align: auto;
+        width: 50%;
+        float: left;
+        padding: 20px;
+        border: 2px solid red;
+    }
+    .card{
+        width:auto;
+        height:50px;
+    }

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt me!!!</title>
+    <link rel = "icon" href = "logo.png" type = "paws.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: #f5f5f5; 
+        font-family: Arial, sans-serif; 
+    }
+    .myheader{
+        padding: 20px;
+        text-align: left; 
+    }
+    .heading1{
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+        color: #fa0505;
+        margin: 0; 
+    }
+    .menu{
+        display: none;
+    }
+    .mysearchform{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+    }
+    .mydogclass{
+        display: grid;
+        grid-template-columns: repeat(2, 150px); 
+        gap: 20px;
+        justify-content: center;
+    }
+    .male, .female{
+        border: 1px solid #fa0505;
+        border-radius: 10px;
+        background-color: #ffffff; 
+        padding: 20px;
+        text-align: center;
+        width: 100%; 
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out; 
+    }
+    .male:hover, .female:hover{
+        transform: translateY(-5px); 
+    }
+    .male img, .female img{
+        display: block;
+        margin: 0 auto 10px;
+        max-width: 70px;
+        width: 50%;
+    }
+    a{
+        color: #000000;
+        text-decoration: none;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    /*.myheader{
+        background-color:#000000 ;
+        opacity:0.4;
+    }*/
+    .mysearch{
+        width: 500px;
+        height: 70px;
+    }
+</style>
+<body>
+    <header class="myheader" >
+        <h1 class="heading1" style="font-size: 100px;">Rover!<sub style="font-size:17px;">Adopt gracefully</sub></h1>
+        <div class="menu">
+            <span id="mymenubutton"><i class="fa fa-bars"></i></span>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="mysearchform">
+                <form action="/backend.js">
+                    <input class="mysearch" type="search" placeholder="     Find your homie here..."><span style="color:#f5f5f5;">_</span>
+                    <button class="mysubmit" type="submit"><img src="/images/mine.jpg" alt="paw" width="40px" height="42px"><br>Search </button>
+                </form>
+            </div>
+            <br><br><br>
+            <div class="mydogclass">
+                <a href="adultm.html" class="male">
+                    <img src="images/adultm.webp" alt="doggie">
+                    <p>Male Adult</p>
+                </a>
+                <a href="adultf.html" class="female">
+                    <img src="images/adultf.webp" alt="doggie"/>
+                    <p>Female Adult</p>
+                </a>
+                <a href="malep.html" class="male">
+                    <img src="images/puppym.png" alt="puppy"/>
+                    <p>Male puppy</p>
+                </a>
+                <a href="femalep.html" class="female">
+                    <img src="images/puppyf.webp" alt="puppy"/>
+                    <p>Female puppy</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="myfooter">
+            <div id="card1">
+                <a></a>
+            </div>
+            <div id="card2">
+                <a ></a>
+            </div>
+            <div id="card3">
+                <a ></a>
+            </div>
+            <div id="card4">
+                <a >Contact Us</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    /*document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector('.mysearchform form');
+        
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const searchInput = form.querySelector('.mysearch').value.toLowerCase().trim();
+
+            
+            switch(searchInput) {
+                case 'male adult':
+                    window.location.href = 'adultm.html';
+                    break;
+                case 'female adult':
+                    window.location.href = 'adultf.html';
+                    break;
+                case 'male puppy':
+                    window.location.href = 'malep.html';
+                    break;
+                case 'female puppy':
+                    window.location.href = 'femalep.html';
+                    break;
+                default:
+                    alert('Please choose from the options given.');
+            }
+        });
+    }); */
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector('.mysearchform form');
+    
+        // Mapping of names to their respective pages
+        const dogDatabase = {
+            "a": "adultf.html",
+            "b": "adultf.html",
+            "c": "adultf.html",
+            "d": "adultf.html",
+            "w": "adultm.html",
+            "x": "adultm.html",
+            "y": "adultm.html",
+            "z": "adultm.html",
+            "m": "malep.html",
+            "n": "malep.html",
+            "o": "malep.html",
+            "p": "malep.html",
+            "e": "femalep.html",
+            "f": "femalep.html",
+            "g": "femalep.html",
+            "h": "femalep.html"
+        };
+    
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            const searchInput = form.querySelector('.mysearch').value.toLowerCase().trim();
+    
+            if (dogDatabase[searchInput]) {
+                window.location.href = dogDatabase[searchInput]; // Redirect to the respective page
+            } else {
+                alert("No match found. Please check the name and try again.");
+            }
+        });
+    });
+    
+    
+</script>
+</html>

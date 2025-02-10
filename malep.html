@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    caption{
+        font-weight: bold;
+    }
+    table{
+        border: 2px solid brown(255, 255, 0);
+        border-spacing: 5px;
+        background-color:rgb(178, 255, 139) ;
+        width:500px;
+    }
+    tr{
+        padding-bottom: 2px;
+    }
+    th{
+        color: brown;
+        border:1px solid brown;
+        padding: 15px;
+    }
+    td{
+        padding: 15px;
+        border:1px solid brown;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(1, 17, 238);
+    }
+    .tw{
+        text-align: center;
+        margin-top: 175px;
+    }
+</style>
+<body>
+    <script src="mm.js"></script>
+
+    <div class="tw">
+    <table align="center">
+        <caption style="font-size: 37px;"><b>Male Puppy<br><br></b></caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age(months)</th>
+                <th>Height(cm)</th>
+                <th>Weight(kg)</th>
+                <th>Photo</th>
+                <th>Buy now</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <div id="AM1">
+                <td>m</td>
+                <td>14</td>
+                <td>15</td>
+                <td>21</td>
+                <td><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8n2UTZY-_KbWV8crq4WD31NTnUeavy0-gHoxfodvqUw&s">click</a></td>
+                <td><a href="#" onclick="handleClick()">Here</a>
+                </td>
+                </div>
+            </tr>
+            <tr>
+                <div id="AM2">
+                <td>n</td>
+                <td>17</td>
+                <td>18</td>
+                <td>23</td>
+                <td><a href="https://www.thesprucepets.com/thmb/r5T8g-0wCJ6ou1nSc8j9S9b7Myw=/2121x0/filters:no_upscale():strip_icc()/GettyImages-1334413816-367a31854c4f44419eccf1fc8b3595fe.jpg">click</a></td>
+                <td><a href="#" onclick="handleClick()">Here</a></td>
+                </div>
+            </tr>
+            <tr>
+                <div id="AM3">
+                <td>o</td>
+                <td>19</td>
+                <td>21</td>
+                <td>24</td>
+                <td><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnbuAy7L_QJ_vbeGvrYi7kO2q-ACUe9YSVyCYa1OOLQQ&s">click</a></td>
+                <td><a href="#" onclick="handleClick()">Here</a></td>
+                </div>
+            </tr>
+            <tr>
+                <div id="AM4">
+                <td>p</td>
+                <td>21</td>
+                <td>27</td>
+                <td>35</td>
+                <td><a href="https://hips.hearstapps.com/hmg-prod/images/unique-dog-names-1542399434.jpg?crop=0.8872133207665724xw:1xh;center,top&resize=1200:*">click</a></td>
+                <td><a href="#" onclick="handleClick()">Here</a></td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
